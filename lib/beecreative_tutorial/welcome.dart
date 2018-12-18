@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'attendance_tutorial.dart';
-import 'camera_tutorial.dart';
+import 'welcome_layout.dart';
+import 'package:ui_tests/assets_repo/appcolors.dart';
+import 'package:ui_tests/assets_repo/appphotos.dart';
+import 'package:ui_tests/assets_repo/fontstyles.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -17,8 +19,30 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return PageView(
       children: <Widget>[
-        new AttendanceTutorial(),
-        new CameraTutorial()
+        new WelcomeLayout(
+          AppPhotos.welcAttendance, 
+          "Randomize", 
+          "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",                    
+          AppFontStyles().gettingStartedAttendanceHeadStyle, 
+          AppFontStyles().gettingStartedBodyStyle, 
+          AppColors.welcAttendanceColor
+        ),
+        new WelcomeLayout(
+          AppPhotos.welcPhotos, 
+          "Randomize", 
+          "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",                    
+          AppFontStyles().gettingStartedPhotosHeadStyle, 
+          AppFontStyles().gettingStartedBodyStyle, 
+          AppColors.welcTakePhotosColor
+        ),
+        new WelcomeLayout(
+          AppPhotos.welcRandomizer, 
+          "Randomize", 
+          "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",                    
+          AppFontStyles().gettingStartedRandomizerHeadStyle, 
+          AppFontStyles().gettingStartedBodyStyle, 
+          AppColors.welcRandomizerColor
+        )
       ],
     );
   }

@@ -1,11 +1,27 @@
 import 'package:flutter/material.dart';
-import 'fontstyles.dart';
 
 class WelcomeLayout extends StatelessWidget {
+
+  final String imageSrc;
+  final String welcHeader;
+  final String welcBody;
+  final bgColor;
+  final TextStyle headerStyle;
+  final TextStyle bodyStyle;
+
+  WelcomeLayout(
+      this.imageSrc, 
+      this.welcHeader, 
+      this.welcBody, 
+      this.headerStyle, 
+      this.bodyStyle,
+      this.bgColor
+    );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff3b2c85),
+      backgroundColor: Color(bgColor),
       body: new Center(
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -16,7 +32,7 @@ class WelcomeLayout extends StatelessWidget {
                 height: 150.61,
                 decoration: BoxDecoration(
                   image: new DecorationImage(
-                    image: ExactAssetImage('assets/images/camera.png'),
+                    image: ExactAssetImage(imageSrc),
                     fit: BoxFit.contain
                   )
                 ),
@@ -42,12 +58,13 @@ class WelcomeLayout extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    new Text("Take Photos", 
-                      style: AppFontStyles().gettingStartedHeadStyle,
+                    new Text(
+                      welcHeader, 
+                      style: headerStyle,
                     ),
                     new Text(
-                      "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",                    
-                      style: AppFontStyles().gettingStartedBodyStyle,
+                      welcBody,
+                      style: bodyStyle,
                     )
                   ],
                 )
