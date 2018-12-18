@@ -22,7 +22,7 @@ class AppFontStyles {
       color: Color(AppColors.welcRandomizerColor)
   );
 
-  final TextStyle _gettingStBody = TextStyle(
+  static TextStyle _gettingStBody = TextStyle(
       fontSize: gettingStartedBody,
       color: Color(AppColors.welcBodyColor)
   );

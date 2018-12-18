@@ -21,7 +21,7 @@ class _WelcomePageState extends State<WelcomePage> {
       children: <Widget>[
         new WelcomeLayout(
           AppPhotos.welcAttendance, 
-          "Randomize", 
+          "Take Attendance", 
           "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",                    
           AppFontStyles().gettingStartedAttendanceHeadStyle, 
           AppFontStyles().gettingStartedBodyStyle, 
@@ -29,7 +29,7 @@ class _WelcomePageState extends State<WelcomePage> {
         ),
         new WelcomeLayout(
           AppPhotos.welcPhotos, 
-          "Randomize", 
+          "Take Pictures", 
           "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",                    
           AppFontStyles().gettingStartedPhotosHeadStyle, 
           AppFontStyles().gettingStartedBodyStyle, 

@@ -42,7 +42,12 @@ class WelcomeLayout extends StatelessWidget {
                 width: 350,
                 height: 400,
                 alignment: Alignment.topCenter,
-                padding: EdgeInsets.all(50),
+                padding: EdgeInsets.only(
+                  top: 50,
+                  bottom: 15,
+                  left: 50,
+                  right: 50
+                ),
                 decoration: new BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
                   color: Colors.white,
@@ -62,9 +67,21 @@ class WelcomeLayout extends StatelessWidget {
                       welcHeader, 
                       style: headerStyle,
                     ),
-                    new Text(
-                      welcBody,
-                      style: bodyStyle,
+                    new Container(
+                      margin: EdgeInsets.only(
+                        top: 20
+                      ),
+                      child: new Text(
+                        welcBody,
+                        style: bodyStyle,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Expanded(
+                      child: new Container(
+                        alignment: Alignment.bottomRight,
+                        child: new Text(">", style: headerStyle),
+                      ),
                     )
                   ],
                 )
