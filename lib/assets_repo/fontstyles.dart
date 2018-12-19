@@ -27,10 +27,20 @@ class AppFontStyles {
       color: Color(AppColors.welcBodyColor)
   );
 
+  static TextStyle welcEnd = TextStyle(
+    fontSize: gettingStartedHeader,
+    color: Color(AppColors.welcEnd)
+  );
+
+  static TextStyle welcendBody = TextStyle(
+    fontSize: gettingStartedHeader,
+    color: Color(AppColors.welcEnd)
+  );
 
   TextStyle get gettingStartedBodyStyle => _gettingStBody;
   TextStyle get gettingStartedAttendanceHeadStyle => welcAttendanceHeader;
   TextStyle get gettingStartedPhotosHeadStyle => welcPhotosHeader;
   TextStyle get gettingStartedRandomizerHeadStyle => welcRandomizerHeader;
+  TextStyle get gettingStartedWelcEndHeadStyle => welcendBody;
 
 }
