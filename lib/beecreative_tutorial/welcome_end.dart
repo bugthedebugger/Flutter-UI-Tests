@@ -74,50 +74,20 @@ class WelcomeEnd extends StatelessWidget {
               ),
               new Column(
                 children: <Widget>[
-                  new Container(
-                    margin: EdgeInsets.only(bottom: 10, left: 50),
-                    width: 500,
-                    height: 50,
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(Icons.check, size: 40, color: Color(AppColors.welcEnd)),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 30.0),
-                          child: Text("Take Attendance", style: AppFontStyles().gettingStartedWelcEndHeadStyle),
-                        )
-                      ],
-                    ),
+                  welcomeEndTextList(
+                      AppColors.welcEnd,
+                      "Take Attendance",
+                      AppFontStyles().gettingStartedWelcEndHeadStyle
                   ),
-                  new Container(
-                    margin: EdgeInsets.only(bottom: 10, left: 50),
-                    width: 500,
-                    height: 50,
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(Icons.check, size: 40, color: Color(AppColors.welcEnd)),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 30.0),
-                          child: Text("Take Photos", style: AppFontStyles().gettingStartedWelcEndHeadStyle),
-                        )
-                      ],
-                    ),
+                  welcomeEndTextList(
+                      AppColors.welcEnd,
+                      "Take Photos",
+                      AppFontStyles().gettingStartedWelcEndHeadStyle
                   ),
-                  new Container(
-                    margin: EdgeInsets.only(bottom: 10, left: 50),
-                    width: 500,
-                    height: 50,
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(Icons.check, size: 40, color: Color(AppColors.welcEnd)),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 30.0),
-                          child: Text("Student Randomizer", style: AppFontStyles().gettingStartedWelcEndHeadStyle)
-                        )
-                      ],
-                    ),
+                  welcomeEndTextList(
+                      AppColors.welcEnd,
+                      "Student Randomizer",
+                      AppFontStyles().gettingStartedWelcEndHeadStyle
                   ),
                 ],
               ),
@@ -136,4 +106,23 @@ class WelcomeEnd extends StatelessWidget {
       ),
     );
   }
+
+  Widget welcomeEndTextList(appColor, text, fontStyle){
+    return new Container(
+      margin: EdgeInsets.only(bottom: 10, left: 50),
+      width: 500,
+      height: 50,
+      child: new Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Icon(Icons.check, size: 40, color: Color(appColor)),
+          Padding(
+            padding: const EdgeInsets.only(left: 30.0),
+            child: Text(text, style: fontStyle),
+          )
+        ],
+      ),
+    );
+  }
+
 }
