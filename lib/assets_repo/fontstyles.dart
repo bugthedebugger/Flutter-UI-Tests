@@ -5,6 +5,7 @@ class AppFontStyles {
 
   static double gettingStartedBody = 18.0;
   static double gettingStartedHeader = 28.0;
+  static double gettingStartedEndHeader = 24;
 
 
   static TextStyle welcAttendanceHeader = TextStyle(
@@ -32,8 +33,8 @@ class AppFontStyles {
     color: Color(AppColors.welcEnd)
   );
 
-  static TextStyle welcendBody = TextStyle(
-    fontSize: gettingStartedHeader,
+  static TextStyle welcendHeader = TextStyle(
+    fontSize: gettingStartedEndHeader,
     color: Color(AppColors.welcEnd)
   );
 
@@ -41,6 +42,6 @@ class AppFontStyles {
   TextStyle get gettingStartedAttendanceHeadStyle => welcAttendanceHeader;
   TextStyle get gettingStartedPhotosHeadStyle => welcPhotosHeader;
   TextStyle get gettingStartedRandomizerHeadStyle => welcRandomizerHeader;
-  TextStyle get gettingStartedWelcEndHeadStyle => welcendBody;
+  TextStyle get gettingStartedWelcEndHeadStyle => welcendHeader;
 
 }

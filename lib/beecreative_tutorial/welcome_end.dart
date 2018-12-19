@@ -6,10 +6,15 @@ import 'package:ui_tests/assets_repo/fontstyles.dart';
 class WelcomeEnd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new Scaffold(
       backgroundColor: Color(AppColors.welcEnd),
       body: new Container(
-        margin: EdgeInsets.all(35),
+        margin: EdgeInsets.only(
+          top: 35,
+          left: 30,
+          right: 30,
+          bottom: 30
+        ),
         padding: EdgeInsets.only(
           top: 20,
           left: 20,
@@ -28,99 +33,96 @@ class WelcomeEnd extends StatelessWidget {
             )
           ]
         ),
-        child: new Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              new Wrap(
-                alignment: WrapAlignment.center,
-                direction: Axis.horizontal,
-                spacing: 30.0,
-                runSpacing: 0.0,
-                runAlignment: WrapAlignment.spaceBetween,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Container(
-                    height: 172.55,
-                    width: 150.61,
-                    decoration: BoxDecoration(
-                      image: new DecorationImage(
-                        image: ExactAssetImage(AppPhotos.welcPhotos),
-                        fit: BoxFit.contain
-                      )
-                    ),
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          welcomeEndPhotos(AppPhotos.welcPhotos),
+                          welcomeEndPhotos(AppPhotos.welcRandomizer)
+                        ],
+                      ),
+                      welcomeEndPhotos(AppPhotos.welcAttendance)
+                    ]
                   ),
-                  new Container(
-                    height: 172.55,
-                    width: 150.61,
-                    decoration: BoxDecoration(
-                      image: new DecorationImage(
-                        image: ExactAssetImage(AppPhotos.welcRandomizer),
-                        fit: BoxFit.contain
-                      )
-                    ),
-                  ),
-                  new Container(
-                    height: 172.55,
-                    width: 150.61,
-                    decoration: BoxDecoration(
-                      image: new DecorationImage(
-                        image: ExactAssetImage(AppPhotos.welcAttendance),
-                        fit: BoxFit.contain
-                      )
-                    ),
-                  )
+                  welcomeEndTextList()
                 ],
               ),
-              new Column(
-                children: <Widget>[
-                  welcomeEndTextList(
-                      AppColors.welcEnd,
-                      "Take Attendance",
-                      AppFontStyles().gettingStartedWelcEndHeadStyle
-                  ),
-                  welcomeEndTextList(
-                      AppColors.welcEnd,
-                      "Take Photos",
-                      AppFontStyles().gettingStartedWelcEndHeadStyle
-                  ),
-                  welcomeEndTextList(
-                      AppColors.welcEnd,
-                      "Student Randomizer",
-                      AppFontStyles().gettingStartedWelcEndHeadStyle
-                  ),
-                ],
-              ),
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  new Text("<", style: AppFontStyles.welcEnd),
-                  new Icon(
-                    Icons.check
-                  ),
-                ],
-              )
-            ],
-          ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("<", style: AppFontStyles().gettingStartedWelcEndHeadStyle),
+                Icon(Icons.check),
+              ]
+            ),
+          ],
         ),
       ),
     );
   }
 
-  Widget welcomeEndTextList(appColor, text, fontStyle){
+  Widget welcomeEndTextList(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            welcomeEndText(
+              AppColors.welcEnd, 
+              "Take Photos", 
+              AppFontStyles().gettingStartedWelcEndHeadStyle,
+            ),
+            welcomeEndText(
+              AppColors.welcEnd, 
+              "Student Randomizer", 
+              AppFontStyles().gettingStartedWelcEndHeadStyle,
+            ),
+            welcomeEndText(
+              AppColors.welcEnd, 
+              "Take Attendance", 
+              AppFontStyles().gettingStartedWelcEndHeadStyle,
+            )
+          ]
+        )
+      ],
+    );
+  }
+
+  Widget welcomeEndText(appColor, text, fontStyle){
+    return new Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.all(5.0),
+          child: Icon(Icons.check, size: 40, color: Color(appColor))
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 20),
+          child: Text(text, style: fontStyle, textAlign: TextAlign.left, textScaleFactor: 1),
+        )
+      ],
+    );
+  }
+
+  Widget welcomeEndPhotos(photo){
     return new Container(
-      margin: EdgeInsets.only(bottom: 10, left: 50),
-      width: 500,
-      height: 50,
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Icon(Icons.check, size: 40, color: Color(appColor)),
-          Padding(
-            padding: const EdgeInsets.only(left: 30.0),
-            child: Text(text, style: fontStyle),
-          )
-        ],
+      height: 172.55,
+      width: 150.61,
+      decoration: BoxDecoration(
+        image: new DecorationImage(
+          image: ExactAssetImage(photo),
+          fit: BoxFit.contain
+        )
       ),
     );
   }
