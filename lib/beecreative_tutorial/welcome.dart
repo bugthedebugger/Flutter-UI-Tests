@@ -12,7 +12,7 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
 
-  PageController _pageController = new PageController(
+  PageController _pageController = PageController(
     initialPage: 1
   );
 
@@ -20,7 +20,7 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return PageView(
       children: <Widget>[
-        new WelcomeLayout(
+        welcomeLayout(
           AppPhotos.welcAttendance,
           "Take Attendance",
           "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",
@@ -28,7 +28,7 @@ class _WelcomePageState extends State<WelcomePage> {
           AppFontStyles().gettingStartedBodyStyle,
           AppColors.welcAttendanceColor
         ),
-        new WelcomeLayout(
+        welcomeLayout(
           AppPhotos.welcPhotos,
           "Take Pictures",
           "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",
@@ -36,7 +36,7 @@ class _WelcomePageState extends State<WelcomePage> {
           AppFontStyles().gettingStartedBodyStyle,
           AppColors.welcTakePhotosColor
         ),
-        new WelcomeLayout(
+        welcomeLayout(
           AppPhotos.welcRandomizer,
           "Randomize",
           "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",
@@ -44,7 +44,7 @@ class _WelcomePageState extends State<WelcomePage> {
           AppFontStyles().gettingStartedBodyStyle,
           AppColors.welcRandomizerColor
         ),
-        new WelcomeEnd()
+        welcomeEnd()
       ],
     );
   }
