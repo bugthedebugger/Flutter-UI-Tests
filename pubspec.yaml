@@ -41,6 +41,11 @@ flutter:
    - assets/images/hands.png
    - assets/images/camera.png
    - assets/images/randomizer.png
+  # splash screen assets
+   - assets/splash-screen/top.png 
+   - assets/splash-screen/mid.png
+   - assets/splash-screen/bot.png
+
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
