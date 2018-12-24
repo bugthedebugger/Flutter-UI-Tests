@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_tests/assets_repo/appphotos.dart';
 import 'package:flutter/animation.dart';
-import 'dart:async';
 import 'package:ui_tests/beecreative_tutorial/welcome.dart';
 
 
@@ -18,8 +17,8 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
   @override
   void initState(){
     super.initState();
-    _controller = AnimationController(vsync: this, duration:Duration(milliseconds: 3000));
-    animation = Tween(begin: 0.0, end: 40.0).animate(_controller)
+    _controller = AnimationController(vsync: this, duration:Duration(seconds: 2));
+    animation = Tween(begin: 40.0, end: 0.0).animate(_controller)
     ..addListener((){
       setState(() {});
     });

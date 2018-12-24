@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'beecreative_tutorial/welcome.dart';
 import 'beecreative_splash_screen/splash_screen.dart';
 
 
