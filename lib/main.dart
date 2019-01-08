@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_tests/beecreative_tutorial/Drawer.dart';
+
 import 'beecreative_splash_screen/splash_screen.dart';
 
 
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter UI Tests",
-      home: SplashScreen(),
+      home: MainPage(),
       debugShowCheckedModeBanner: false,
     );
   }
