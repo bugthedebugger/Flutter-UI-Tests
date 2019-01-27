@@ -4,4 +4,6 @@ class AppColors{
   static var welcBodyColor = 0xff444444;
   static var welcRandomizerColor = 0xfff8b500;
   static var welcEnd = 0xff05004E;
+  static var loginBackground = 0xff34B2CC;
+  static var loginGrass = 0xff408950;
 }

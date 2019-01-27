@@ -21,7 +21,7 @@ class _WelcomePageState extends State<WelcomePage> {
     return Scaffold(
       body: PageView(
         children: <Widget>[
-          welcomeLayout(
+          WelcomeLayout(
             AppPhotos.welcAttendance,
             "Take Attendance",
             "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",
@@ -29,7 +29,7 @@ class _WelcomePageState extends State<WelcomePage> {
             AppFontStyles().gettingStartedBodyStyle,
             AppColors.welcAttendanceColor
           ),
-          welcomeLayout(
+          WelcomeLayout(
             AppPhotos.welcPhotos,
             "Take Pictures",
             "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",
@@ -37,7 +37,7 @@ class _WelcomePageState extends State<WelcomePage> {
             AppFontStyles().gettingStartedBodyStyle,
             AppColors.welcTakePhotosColor
           ),
-          welcomeLayout(
+          WelcomeLayout(
             AppPhotos.welcRandomizer,
             "Randomize",
             "No longer do you need to need the traditional approach to take attendance. With the all new BC APP, you can take attendance with ease. Just tap the kids that are absent and you are good to go!",
@@ -45,7 +45,7 @@ class _WelcomePageState extends State<WelcomePage> {
             AppFontStyles().gettingStartedBodyStyle,
             AppColors.welcRandomizerColor
           ),
-          welcomeEnd()
+          welcomeEnd(context)
         ],
       ),
     );

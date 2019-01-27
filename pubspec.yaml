@@ -45,6 +45,19 @@ flutter:
    - assets/splash-screen/top.png 
    - assets/splash-screen/mid.png
    - assets/splash-screen/bot.png
+  #  login screen assets
+   - assets/images/login_screen/beecreative.png
+   - assets/images/login_screen/bird1.png
+   - assets/images/login_screen/bird2.png
+   - assets/images/login_screen/bird3.png
+   - assets/images/login_screen/cloud1.png
+   - assets/images/login_screen/cloud2.png
+   - assets/images/login_screen/cloud3.png
+   - assets/images/login_screen/karkhana_building.png
+   - assets/images/login_screen/karkhana_head.png
+   - assets/images/login_screen/logo.png
+   - assets/images/login_screen/grass1.png
+   - assets/images/login_screen/grass2.png
 
   #  - images/a_dot_ham.jpeg
 

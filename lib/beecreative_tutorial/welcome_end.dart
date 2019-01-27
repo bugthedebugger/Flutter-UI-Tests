@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ui_tests/assets_repo/appphotos.dart';
 import 'package:ui_tests/assets_repo/appcolors.dart';
 import 'package:ui_tests/assets_repo/fontstyles.dart';
+import 'package:ui_tests/beecreative_login/login.dart';
 
-Widget welcomeEnd(){
+Widget welcomeEnd(context){
   return new Scaffold(
     backgroundColor: Color(AppColors.welcEnd),
     body: new Container(
@@ -58,7 +59,15 @@ Widget welcomeEnd(){
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text("<", style: AppFontStyles().gettingStartedWelcEndHeadStyle),
-              Icon(Icons.check),
+              GestureDetector(
+                child: Icon(Icons.check),
+                onTap: (){
+                  Navigator.pushReplacement(
+                    context, 
+                    MaterialPageRoute(builder: (context) => LoginScreen())
+                  );
+                },
+              ),
             ]
           ),
         ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+/*
 Widget welcomeLayout(String imageSrc, String welcHeader, String welcBody, 
                      TextStyle headerStyle, TextStyle bodyStyle, int bgColor) {
   return Scaffold(
@@ -74,8 +76,8 @@ Widget welcomeLayout(String imageSrc, String welcHeader, String welcBody,
   );
  
 }
+*/
 
-/*
 class WelcomeLayout extends StatelessWidget {
 
   final String imageSrc;
@@ -168,4 +170,3 @@ class WelcomeLayout extends StatelessWidget {
     );
   }
 }
-*/
