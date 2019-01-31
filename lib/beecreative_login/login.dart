@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 40,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: ExactAssetImage(AppPhotos.loginScreen_cloud3),
+                  image: ExactAssetImage(AppPhotos.loginScreenCloud3),
                   fit: BoxFit.contain
                 )
               ),
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 40,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: ExactAssetImage(AppPhotos.loginScreen_cloud1),
+                  image: ExactAssetImage(AppPhotos.loginScreenCloud1),
                   fit: BoxFit.contain
                 )
               ),
@@ -57,20 +57,62 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 40,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: ExactAssetImage(AppPhotos.loginScreen_cloud2),
+                  image: ExactAssetImage(AppPhotos.loginScreenCloud2),
                   fit: BoxFit.contain
                 )
               ),
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.47,
+            top: 90,
+            right: 80,
+            child: Container(
+              width: 18,
+              height: 18,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: ExactAssetImage(AppPhotos.loginScreenBird1),
+                  fit: BoxFit.contain
+                )
+              ),
+            )
+          ),
+          Positioned(
+            top: 100,
+            right: 100,
+            child: Container(
+              width: 25,
+              height: 25,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: ExactAssetImage(AppPhotos.loginScreenBird1),
+                  fit: BoxFit.contain
+                )
+              ),
+            )
+          ),
+          Positioned(
+            top: 105,
+            right: 85,
+            child: Container(
+              width: 18,
+              height: 18,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: ExactAssetImage(AppPhotos.loginScreenBird1),
+                  fit: BoxFit.contain
+                )
+              ),
+            )
+          ),
+          Positioned(
+            top: 310,
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: 23,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: ExactAssetImage(AppPhotos.loginScreen_grass1),
+                  image: ExactAssetImage(AppPhotos.loginScreenGrass1),
                   repeat: ImageRepeat.repeatX,
                   fit: BoxFit.contain,
                   alignment: Alignment.centerLeft,
@@ -80,10 +122,10 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.50,
+            top: 330,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.50,
+              height: MediaQuery.of(context).size.height,
               color: Color(AppColors.loginGrass),
             ),
           ),
@@ -91,15 +133,15 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Expanded(
-                  child: Container(),
+                SizedBox(
+                  height: 160,
                 ),
                 Container(
                   width: 268,
                   height: 172,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: ExactAssetImage(AppPhotos.loginScreen_karkhana_building),
+                      image: ExactAssetImage(AppPhotos.loginScreenKarkhanaBuilding),
                       fit: BoxFit.fill
                     ),
                   ),

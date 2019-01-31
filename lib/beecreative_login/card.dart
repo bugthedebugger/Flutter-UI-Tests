@@ -37,7 +37,7 @@ class LoginCard extends StatelessWidget {
             height: 57,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(AppPhotos.loginScreen_logo)
+                image: AssetImage(AppPhotos.loginScreenLogo)
               )
             ),
           ),
@@ -46,7 +46,7 @@ class LoginCard extends StatelessWidget {
             height: 56,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(AppPhotos.loginScreen_beecreative)
+                image: AssetImage(AppPhotos.loginScreenBeecreative)
               )
             ),
           ),
@@ -76,7 +76,7 @@ class LoginCard extends StatelessWidget {
                     height: 20,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(AppPhotos.loginScreen_karkhana_head)
+                        image: AssetImage(AppPhotos.loginScreenKarkhanaHead)
                       )
                     ),
                   ),
