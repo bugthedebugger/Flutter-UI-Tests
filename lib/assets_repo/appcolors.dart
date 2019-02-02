@@ -6,4 +6,7 @@ class AppColors{
   static var welcEnd = 0xff05004E;
   static var loginBackground = 0xff34B2CC;
   static var loginGrass = 0xff408950;
+  static var loginInfoText = 0xff7C8D9C;
+  static var loginButton = 0xff408950;
+  static var loginWithEmailText = 0xff41B2DC;
 }

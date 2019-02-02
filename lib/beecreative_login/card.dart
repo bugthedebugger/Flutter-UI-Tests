@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:ui_tests/assets_repo/appcolors.dart';
 import 'package:ui_tests/assets_repo/appphotos.dart';
+import 'package:ui_tests/assets_repo/fontstyles.dart';
 
 class LoginCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double scaling = screenWidth / screenHeight;
+    print("Scaling in login card: $scaling"); 
     return Container(
       margin: EdgeInsets.only(bottom: 10),
-      width: 300,
-      height: 310,
+      width: 220 + 220 * scaling,
+      height: 220 + 220 * scaling,
       alignment: Alignment.topCenter,
       padding: EdgeInsets.only(
         top: 15,
@@ -53,21 +59,19 @@ class LoginCard extends StatelessWidget {
           SizedBox(height: 10),
           Text(
             "By logging in to BeeCreative Mobile, you agree to these Terms and Conditions and Privacy Policy",
-            style: TextStyle(
-              color: Color(0xff7C8D9C),
-              
-            ),
+            style: AppFontStyles().loginInfoTextStyle,
             textAlign: TextAlign.center,
           ),
+          SizedBox(height: 10),
           RaisedButton(
             onPressed: (){},
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10)
             ),
-            color: Color(0xff408950),
+            color: Color(AppColors.loginButton),
             child: Container(
               width: 249,
-              height: 30,
+              // height: 30,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -85,19 +89,16 @@ class LoginCard extends StatelessWidget {
                   ),
                   Text(
                     "Sign in with Karkhana",
-                    style: TextStyle(
-                      color: Colors.white
-                    ),
+                    style: AppFontStyles().loginButtonStyle,
                   ),
                 ],
               ),
             ),
           ),
+          SizedBox(height: 10),
           Text(
             "Sign in with Email",
-            style: TextStyle(
-              color: Color(0xff41B2DC)
-            ),
+            style: AppFontStyles().loginWithEmailStyle,
           )
         ],
       )
