@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ui_tests/assets_repo/appcolors.dart';
 import 'package:ui_tests/assets_repo/appphotos.dart';
-import 'package:ui_tests/beecreative_login/card.dart';
+import 'package:ui_tests/beecreative_login/login_card.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -12,17 +13,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final double scaling = MediaQuery.of(context).size.width / MediaQuery.of(context).size.height;
+    ScreenUtil.instance = ScreenUtil(width: 360, height: 640, allowFontScaling: true)..init(context);
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
-    final double invScaling = 1 / scaling;
-    print(screenHeight - scaling * screenHeight);
-    print("Inverse scaling: $invScaling");
-    print("width: $screenWidth");
-    final double screenWidthComputed = screenWidth / 4;
-    // final double screenHeightComputed = screenHeight / 4;
-    final double screenHeightComputed = screenHeight / (scaling * screenHeight / 100);
-    print("My Scaling: $scaling");
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
@@ -34,11 +27,11 @@ class _LoginScreenState extends State<LoginScreen> {
             color: Color(AppColors.loginBackground),
           ),
           Positioned(
-            top: 60,
-            left: 20,
+            top: ScreenUtil().setHeight(46),
+            left: ScreenUtil().setWidth(24),
             child: Container(
-              width: 80,
-              height: 40,
+              width: ScreenUtil().setWidth(80),
+              height: ScreenUtil().setHeight(40),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExactAssetImage(AppPhotos.loginScreenCloud3),
@@ -48,11 +41,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            top: 110,
-            left: 200,
+            top: ScreenUtil().setHeight(89),
+            left: ScreenUtil().setWidth(159),
             child: Container(
-              width: 40,
-              height: 40,
+              width: ScreenUtil().setWidth(42),
+              height: ScreenUtil().setHeight(21),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExactAssetImage(AppPhotos.loginScreenCloud1),
@@ -62,11 +55,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            top: 50,
-            right: 20,
+            top: ScreenUtil().setHeight(30),
+            right: ScreenUtil().setWidth(23),
             child: Container(
-              width: 100,
-              height: 40,
+              width: ScreenUtil().setWidth(74),
+              height: ScreenUtil().setHeight(38),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExactAssetImage(AppPhotos.loginScreenCloud2),
@@ -76,11 +69,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            top: 90,
-            right: 80,
+            top: ScreenUtil().setHeight(76),
+            right: ScreenUtil().setWidth(42),
             child: Container(
-              width: 18,
-              height: 18,
+              width: ScreenUtil().setWidth(17),
+              height: ScreenUtil().setHeight(12),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExactAssetImage(AppPhotos.loginScreenBird1),
@@ -90,11 +83,11 @@ class _LoginScreenState extends State<LoginScreen> {
             )
           ),
           Positioned(
-            top: 100,
-            right: 100,
+            top: ScreenUtil().setHeight(92),
+            right: ScreenUtil().setWidth(82),
             child: Container(
-              width: 25,
-              height: 25,
+              width: ScreenUtil().setWidth(28),
+              height: ScreenUtil().setHeight(19),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExactAssetImage(AppPhotos.loginScreenBird1),
@@ -104,11 +97,11 @@ class _LoginScreenState extends State<LoginScreen> {
             )
           ),
           Positioned(
-            top: 105,
-            right: 85,
+            top: ScreenUtil().setHeight(98),
+            right: ScreenUtil().setWidth(58),
             child: Container(
-              width: 18,
-              height: 18,
+              width: ScreenUtil().setWidth(17),
+              height: ScreenUtil().setHeight(12),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExactAssetImage(AppPhotos.loginScreenBird1),
@@ -118,11 +111,11 @@ class _LoginScreenState extends State<LoginScreen> {
             )
           ),
           Positioned(
-            top: screenHeight / 2.2,
+            top: ScreenUtil().setHeight(282),
             // top: screenHeight - screenHeight * scaling,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: 23,
+              height: ScreenUtil().setHeight(23),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: ExactAssetImage(AppPhotos.loginScreenGrass1),
@@ -135,40 +128,34 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Positioned(
-            top: screenHeight / 2.2 + 20,
+            top: ScreenUtil().setHeight(303),
             child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
+              width: screenWidth,
+              height: screenHeight,
               color: Color(AppColors.loginGrass),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 10),
+          Positioned(
+            top: ScreenUtil().setHeight(147),
             child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  // SizedBox(
-                  //   height: screenHeightComputed * scaling + screenWidthComputed * scaling
-                  // ),
-                  Container(
-                    width: 230 + 230 * scaling,
-                    height: 172 + 172 * scaling,
-                    decoration: BoxDecoration(
-                      image: DecorationImage( 
-                        image: ExactAssetImage(AppPhotos.loginScreenKarkhanaBuilding),
-                        fit: BoxFit.contain
-                      ),
-                    ),
+              child: Container(
+                width: ScreenUtil().setWidth(268),
+                height: ScreenUtil().setHeight(171),
+                decoration: BoxDecoration(
+                  image: DecorationImage( 
+                    image: ExactAssetImage(AppPhotos.loginScreenKarkhanaBuilding),
+                    fit: BoxFit.contain
                   ),
-                  // SizedBox(
-                  //   height: ,
-                  // ),
-                  LoginCard(),
-                ],
+                ),
               ),
             ),
-          )
+          ),
+          Positioned(
+            top: ScreenUtil().setHeight(320),
+            child: Center(
+              child: LoginCard(),
+            ),
+          ),
         ],
       ),
     );
