@@ -3,6 +3,7 @@ import 'package:ui_tests/assets_repo/appcolors.dart';
 import 'package:ui_tests/assets_repo/appphotos.dart';
 import 'package:ui_tests/assets_repo/fontstyles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ui_tests/beecreative_login/email_login.dart';
 
 class LoginCard extends StatelessWidget {
   @override
@@ -93,9 +94,14 @@ class LoginCard extends StatelessWidget {
             ),
           ),
           SizedBox(height: ScreenUtil().setHeight(20)),
-          Text(
-            "Sign in with Email",
-            style: AppFontStyles().loginWithEmailStyle,
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => EmailLoginScreen()));
+            },
+            child: Text(
+              "Sign in with Email",
+              style: AppFontStyles().loginWithEmailStyle,
+            ),
           )
         ],
       )
