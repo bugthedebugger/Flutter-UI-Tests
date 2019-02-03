@@ -87,6 +87,7 @@ class EmailCard extends StatelessWidget {
               obscureText: true,
               focusNode: _focusNode2,
             ),
+            SizedBox(height: ScreenUtil().setHeight(10)),
             RaisedButton(
               onPressed: (){},
               elevation: 0,
@@ -95,23 +96,13 @@ class EmailCard extends StatelessWidget {
               ),
               color: Color(AppColors.loginButton),
               child: Container(
-                width: ScreenUtil().setWidth(249),
+                width: ScreenUtil().setWidth(74),
                 height: ScreenUtil().setHeight(30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Container(
-                      width: ScreenUtil().setWidth(19),
-                      height: ScreenUtil().setHeight(20),
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(AppPhotos.loginScreenKarkhanaHead)
-                        )
-                      ),
-                    ),
-                    SizedBox(width: ScreenUtil().setWidth(10)),
                     Text(
-                      "Sign in with Karkhana",
+                      "Sign in",
                       style: AppFontStyles().loginButtonStyle,
                     ),
                   ],
