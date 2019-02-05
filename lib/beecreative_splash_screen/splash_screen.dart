@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
   @override
   void initState(){
     super.initState();
-    _controller = AnimationController(vsync: this, duration:Duration(seconds: 2));
+    _controller = AnimationController(vsync: this, duration:Duration(seconds: 1));
     animation = Tween(begin: 40.0, end: 0.0).animate(_controller)
     ..addListener((){
       setState(() {});

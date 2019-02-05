@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EmailCard extends StatelessWidget {
 
-  FocusNode _focusNode1;
-  FocusNode _focusNode2;
+  final FocusNode _focusNode1;
+  final FocusNode _focusNode2;
 
   EmailCard(this._focusNode1, this._focusNode2);
 
