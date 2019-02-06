@@ -38,7 +38,6 @@ class _NotificationWelcomeState extends State<NotificationWelcome> {
                       backgroundColor: Colors.white,
                       radius: ScreenUtil().setHeight(58),
                     ),
-                    SizedBox(height: ScreenUtil().setHeight(10)),
                     StreamBuilder(
                       stream: _stream ,
                       initialData: Text(
@@ -79,9 +78,6 @@ class _NotificationWelcomeState extends State<NotificationWelcome> {
                       fontSize: 15,
                     ),
                     textAlign: TextAlign.justify,
-                  ),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(15),
                   ),
                   Row(
                     children: <Widget>[
@@ -137,7 +133,7 @@ class _NotificationWelcomeState extends State<NotificationWelcome> {
                       )
                     ],
                   ),
-                  SizedBox(height: ScreenUtil().setHeight(30)),
+                  SizedBox(height: ScreenUtil().setHeight(15)),
                   RaisedButton(
                     elevation: 1,
                     padding: EdgeInsets.symmetric(
