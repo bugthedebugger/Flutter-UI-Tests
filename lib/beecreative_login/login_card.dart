@@ -4,6 +4,7 @@ import 'package:ui_tests/assets_repo/appphotos.dart';
 import 'package:ui_tests/assets_repo/fontstyles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ui_tests/beecreative_login/email_login.dart';
+import 'package:ui_tests/beecreative_notification_welcome.dart/notification_welcome.dart';
 
 class LoginCard extends StatelessWidget {
   @override
@@ -61,12 +62,14 @@ class LoginCard extends StatelessWidget {
             style: AppFontStyles().loginInfoTextStyle,
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: ScreenUtil().setHeight(20)),
+          SizedBox(height: ScreenUtil().setHeight(10)),
           RaisedButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationWelcome()));
+            },
             elevation: 0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10)
+              borderRadius: BorderRadius.circular(30)
             ),
             color: Color(AppColors.loginButton),
             child: Container(
@@ -93,7 +96,7 @@ class LoginCard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: ScreenUtil().setHeight(20)),
+          SizedBox(height: ScreenUtil().setHeight(10)),
           GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => EmailLoginScreen()));

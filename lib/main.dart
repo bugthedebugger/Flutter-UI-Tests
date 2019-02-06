@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
       title: "Flutter UI Tests",
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: "Poppins"
+      ),
     );
   }
 }

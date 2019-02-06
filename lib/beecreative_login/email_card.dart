@@ -61,7 +61,6 @@ class EmailCard extends StatelessWidget {
                 )
               ),
             ),
-            SizedBox(height: ScreenUtil().setHeight(10)),
             TextField(
               decoration: InputDecoration(
                 enabledBorder: UnderlineInputBorder(
@@ -92,7 +91,7 @@ class EmailCard extends StatelessWidget {
               onPressed: (){},
               elevation: 0,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)
+                borderRadius: BorderRadius.circular(30)
               ),
               color: Color(AppColors.loginButton),
               child: Container(

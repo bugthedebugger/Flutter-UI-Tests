@@ -10,4 +10,5 @@ class AppColors{
   static var loginButton = 0xff408950;
   static var loginWithEmailText = 0xff41B2DC;
   static var emailHint = 0xff408950;
+  static var meltingCardColor = 0xff3B2C85;
 }

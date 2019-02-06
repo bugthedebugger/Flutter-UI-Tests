@@ -60,6 +60,15 @@ flutter:
    - assets/images/login_screen/grass1.png
    - assets/images/login_screen/grass2.png
 
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins/Poppins-Italic.ttf
+          style: italic
+
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
