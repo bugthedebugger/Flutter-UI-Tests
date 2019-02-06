@@ -37,20 +37,20 @@ class _NotificationWelcomeState extends State<NotificationWelcome> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: ScreenUtil().setHeight(58),
-                        child: Container(
-                          width: ScreenUtil().setHeight(110),
-                          height: ScreenUtil().setHeight(110),
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(AppPhotos.staticAvatar),
-                              fit: BoxFit.contain
-                            )
-                          ),
+                      Container(
+                        width: ScreenUtil().setWidth(80),
+                        height: ScreenUtil().setHeight(80),
+                        padding: EdgeInsets.all(2),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle
+                        ),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.white,
+                          backgroundImage: AssetImage(AppPhotos.staticAvatar),
                         ),
                       ),
+                      SizedBox(height: 5,),
                       StreamBuilder(
                         stream: _stream ,
                         initialData: Text(
