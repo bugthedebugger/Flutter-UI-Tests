@@ -30,7 +30,7 @@ class _NotificationWelcomeState extends State<NotificationWelcome> {
           children: <Widget>[
             MeltingCard(
               color: Color(AppColors.meltingCardColor),
-              height: ScreenUtil().setHeight(320),
+              height: ScreenUtil().setHeight(300),
               child: Padding(
                 padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(150)),
                 child: Center(
@@ -39,7 +39,7 @@ class _NotificationWelcomeState extends State<NotificationWelcome> {
                     children: <Widget>[
                       Container(
                         width: ScreenUtil().setWidth(80),
-                        height: ScreenUtil().setHeight(80),
+                        height: ScreenUtil().setWidth(80),
                         padding: EdgeInsets.all(2),
                         decoration: BoxDecoration(
                           color: Colors.white,
