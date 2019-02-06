@@ -20,5 +20,6 @@ class AppPhotos{
   static String loginScreenLogo = "assets/images/login_screen/logo.png";
   static String loginScreenGrass1 = "assets/images/login_screen/grass1.png";
   static String loginScreenGrass2 = "assets/images/login_screen/grass2.png";
+  static String staticAvatar = "assets/images/avatar.png";
 
 }
